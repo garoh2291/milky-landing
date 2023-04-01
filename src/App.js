@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from "react";
+import "./App.css";
+import "../src/utils/i18next";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./components/styles/Global";
+import { StyledApp } from "./components/styles/app.styles";
+import { Header } from "./Layout/Header";
+
+const theme = {
+  colors: {
+    header: "rgb(var(--tmdbDarkBlue))",
+    body: "#000",
+    body1: "rgba(217, 217, 217, 0.27)",
+    footer: "#003333",
+  },
+  mobile: "800px",
+  mobile2: "600px",
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<h1>Loading</h1>}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <StyledApp>
+          <Header />
+        </StyledApp>
+      </ThemeProvider>
+    </Suspense>
   );
 }
 

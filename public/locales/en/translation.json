@@ -1,0 +1,52 @@
+{
+  "header": {
+    "home": "Home",
+    "predictions": "Predictions",
+    "daily": "Daily Express",
+    "math": "Our Math",
+    "joinUs": "Join Us"
+  },
+  "main": {
+    "prediction1": "PREDICTION is",
+    "prediction2": "understanding",
+    "prediction3": "the PAST",
+    "prediction4": "We have already done it for you",
+    "button": "Free Predictions"
+  },
+  "faq": {
+    "head": "Frequently Asked Question",
+    "faq1q": "How much minimum investment is needed?",
+    "faq1a": "We do NOT set any minimum scale for investing in bets. On the contrary, we urge you to invest as little money as possible, as the risk factor has nothing to do with the size of the investment. However, taking into account the fees for using the system, you will be able to receive income only if your initial bankroll (budget) will be 40 USD or more.",
+    "faq2q": "How reliable is computational mathematics?",
+    "faq2a": "We do not calculate based on doubling. Our algorithms have 2 fundamental pillars. The first is the probabilities for which calculation requires the analysis of millions of past data about every team and game. The second is risk reduction through proper budget diversification (diversification of directions).Thus, we guarantee that in the long run you will not have at least as much loss as you could have without considering the following factors, and the potential returns will exceed your expectations.",
+    "faq3q": "How much do the predictions cost?",
+    "faq3a": "Predictions for single games are completely free of charge on our website and no registration or credit card is needed. To view them you can go to this link. However, if you want to get high-revenue express games, or long-term and low-risk strategies, you need to register in the system. We have different price offers, depending on the type of bet, terms and other factors. Prices start from 2.5 USD.",
+    "faq4q": "How much does the registration cost?",
+    "faq4a": "Registration at BetSet and single-game predictions are completely free.",
+    "faq5q": "How is the payment made?",
+    "faq5a": "We have several options: monthly subscription packages and one-time payment coupons. The cost of each coupon starts from 2.5 USD and varies depending on its type and strategy terms.",
+    "faq6q": "For which games are the investments calculated?",
+    "faq6a": "We mainly watch popular sports games such as football, volleyball, tennis, etc. The reason is that from the point of view of sports analysis, the more famous the team is, the more real the win chances are. However, there are cases when we see the expediency of investing in lesser-known sports and cyber-sports.",
+    "faq7q": "What is a bankroll?",
+    "faq7a": "Bankroll is your current budget for investments. For example, if you decide to invest no more than 40 USD today, your bankroll will be 40 USD. The moment you place a bet of 10 USD for a game, your bankroll will become 30 USD.",
+    "faq8q": "What are the key factors taken into account when making calculations?",
+    "faq8a": "The circumstances are very different: from the odds provided by bookmakers and weather conditions to the odds provided by our analysts and public opinion. All this information eventually turns into several strategies that have different goals and timelines.",
+    "faq9q": "What strategies do you suggest?",
+    "faq9a": "We have several strategies: Passive, Aggressive, Massive, and Cumulative. They differ from each other in the permissible limits of risk and the degree of diversification. You can make more detailed calculations by following this link. For example, a passive strategy is profitable only in the case of long-term investments (1 month or more) but has the lowest risk. You can choose one of them each time you place a bet, but we strongly advise you not to change your strategy often, as each has its long-term calculation system.",
+    "faq10q": "Does the psychological effect have a big impact on the final result?",
+    "faq10a": "Success in this business depends on two key factors. The first is the correctly made calculations and the chosen strategy: we do it for you. The second is psychology. If you want to succeed, you have to make a long-term decision to be an unbreakable disciplined. In this case, incomes are never given to the wind due to cravings, and short-term losses are reimbursed very quickly.Remember, the guarantee of victory is us together, not each of us separately."
+  },
+  "subscribe": {
+    "subsHead": "Subscribe",
+    "subDesc": "To get the best deals and offer directly into your inbox",
+    "email": "Your Email",
+    "subComf": "Subscribe"
+  },
+  "footer": {
+    "mainText": "We offer comprehensive statistics and strategies on sports betting.Any information on this website expresses our subjective opinion. The organization is not responsible for the outcome of events or other consequences.",
+    "links": "Quick Links",
+    "touch": "Get in touch",
+    "privacy": "Privacy Policy",
+    "betset": "© 2022 BetSet LLC. All rights reserved."
+  }
+}
