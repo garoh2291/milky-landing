@@ -13,6 +13,13 @@
     "prediction4": "We have already done it for you",
     "button": "Free Predictions"
   },
+  "promo": {
+    "text1": "Join Premium And Get",
+    "text2": "Checks",
+    "special": "Express",
+    "join": "join premium",
+    "express": "Express Check"
+  },
   "faq": {
     "head": "Frequently Asked Question",
     "faq1q": "How much minimum investment is needed?",

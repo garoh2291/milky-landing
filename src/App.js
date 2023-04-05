@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/styles/Global";
 import { StyledApp } from "./components/styles/app.styles";
 import { Header } from "./Layout/Header";
+import { Promo } from "./components/demo";
 
 const theme = {
   colors: {
@@ -24,6 +25,7 @@ function App() {
         <GlobalStyles />
         <StyledApp>
           <Header />
+          <Promo />
         </StyledApp>
       </ThemeProvider>
     </Suspense>
