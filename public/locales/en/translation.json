@@ -1,17 +1,20 @@
 {
   "header": {
-    "home": "Home",
-    "predictions": "Predictions",
-    "daily": "Daily Express",
-    "math": "Our Math",
-    "joinUs": "Join Us"
+    "login": "Log In",
+    "join": "Join Premium"
   },
   "main": {
-    "prediction1": "PREDICTION is",
-    "prediction2": "understanding",
-    "prediction3": "the PAST",
+    "prediction1": "65% Accurate Predictions",
     "prediction4": "We have already done it for you",
-    "button": "Free Predictions"
+    "button": "Explore"
+  },
+  "types": {
+    "football": "football",
+    "tennis": "tennis",
+    "volleyball": "volleyball",
+    "basketball": "basketball",
+    "ice hockey": "hockey",
+    "all sports": "all sports"
   },
   "faq": {
     "head": "Frequently Asked Question",

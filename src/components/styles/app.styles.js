@@ -13,8 +13,10 @@ export const StyledApp = styled.div`
 `;
 
 export const StyledContainer = styled.div`
+  max-width: 1400px;
   width: 100%;
   padding: 0 64px;
   height: auto;
   margin: 0 auto;
+  /*border: 1px solid white;*/
 `;
