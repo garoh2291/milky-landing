@@ -16,6 +16,21 @@
     "ice hockey": "hockey",
     "all sports": "all sports"
   },
+  "promo": {
+    "text1": "Join Premium And Get",
+    "text2": "Checks",
+    "special": "Express",
+    "join": "join premium",
+    "express": "Express Check",
+    "type": "Sport",
+    "event": "Event",
+    "position": "Position",
+    "cf": "Coefficient",
+    "t1": "Team 1",
+    "t2": "Team 2",
+    "ev1": "Handicap: Handicap 1 (-2.5)",
+    "ev2": "Winner: 2"
+  },
   "faq": {
     "head": "Frequently Asked Question",
     "faq1q": "How much minimum investment is needed?",

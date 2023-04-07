@@ -8,6 +8,8 @@ import { Header } from "./Layout/Header";
 import { LangContextProvivder } from "./context/provider";
 import { Main } from "./components/Main";
 import { Predictions } from "./components/Predictions";
+import { Promo } from "./components/demo";
+import { FAQ } from "./components/faq";
 
 const theme = {
   colors: {
@@ -28,8 +30,10 @@ function App() {
           <GlobalStyles />
           <StyledApp>
             <Header />
-            <Main />
-            <Predictions />
+            {/*<Main />
+            <Predictions />*/}
+            {/*<Promo />*/}
+            <FAQ />
           </StyledApp>
         </ThemeProvider>
       </LangContextProvivder>
