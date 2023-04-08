@@ -13,6 +13,7 @@ export const StyledPredictions = styled.div`
 export const PredictWrapper = styled.div`
   width: 100%;
   min-height: 300px;
+  padding-bottom: 60px;
 `;
 
 export const StyledTypes = styled.div`
@@ -57,10 +58,32 @@ export const StyledBoard = styled.div`
   width: 100%;
   min-height: 550px;
   margin-top: 20px;
-  /*border: 1px solid;*/
   display: grid;
-  grid-template-columns: repeat(auto-fill, 416px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 410px);
+  grid-gap: 20px;
+`;
+
+export const MoreBtnWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > button {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 42px;
+    width: 210px;
+    height: 44px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    border: none;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
 `;
 
 export const StandartWrap = styled.div`
@@ -73,7 +96,7 @@ export const StandartWrap = styled.div`
 export const MatchWrap = styled.div`
   width: 416px;
   grid-row-end: span 2;
-  height: 532px;
+  height: 542px;
 
   background: rgba(255, 255, 255, 0.09);
   border-radius: 18px;

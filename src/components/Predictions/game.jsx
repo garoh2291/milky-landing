@@ -11,12 +11,12 @@ import calendar from "../../assets/calendar.png";
 import moment from "moment";
 import { LangContext } from "../../context";
 
-export const Game = ({ game }) => {
+export const Game = ({ game, idx }) => {
   const { t } = useTranslation();
   const date = moment(game.date).utc().format("DD MMMM");
   const time = moment(game.date).utc().format("HH:mm");
   const { lang } = useContext(LangContext);
-  if (game.matchDay === "yes") {
+  if (idx === 0 && game.matchDay === "yes") {
     return (
       <MatchWrap>
         {date}

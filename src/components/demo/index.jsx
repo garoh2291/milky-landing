@@ -9,10 +9,10 @@ import {
   PromoWrapper,
   StyledPromo,
 } from "../styles/promo.styles";
+import * as moment from "moment";
 import calendar from "../../assets/calendar.png";
 import football from "../../assets/football.png";
 import volleyball from "../../assets/volleyball.png";
-import moment from "moment";
 import { useContext } from "react";
 import { LangContext } from "../../context";
 

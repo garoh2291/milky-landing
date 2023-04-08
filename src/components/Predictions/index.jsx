@@ -6,16 +6,25 @@ import {
 } from "../styles/predictions.styles";
 import { Board } from "./board";
 import { Types } from "./types";
+import moment from "moment";
 
 export const Predictions = () => {
   const [type, setType] = useState("all sports");
   const [games, setGames] = useState(null);
+  const [clicked, setClicked] = useState(false);
+
+  const date = moment(new Date()).utc(8).toISOString();
 
   useEffect(() => {
-    fetch(`https://milky-admin.herokuapp.com/game?complete_gte=2023-03-31&`)
+    fetch(`https://milky-admin.herokuapp.com/game?complete_gte=${date}&`)
       .then((res) => res.json())
       .then((data) => setGames(data));
   }, []);
+
+  const changeType = (type) => {
+    setType(type);
+    setClicked(false);
+  };
 
   if (!games) {
     return <h6>Loading</h6>;
@@ -25,8 +34,13 @@ export const Predictions = () => {
     <StyledPredictions>
       <StyledContainer>
         <PredictWrapper>
-          <Types type={type} setType={setType} />
-          <Board games={games} type={type} />
+          <Types type={type} changeType={changeType} />
+          <Board
+            games={games}
+            type={type}
+            clicked={clicked}
+            setClicked={setClicked}
+          />
         </PredictWrapper>
       </StyledContainer>
     </StyledPredictions>

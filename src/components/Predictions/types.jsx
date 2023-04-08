@@ -7,15 +7,15 @@ import volleyball from "../../assets/volleyball.png";
 import basketball from "../../assets/basketball.png";
 import { useTranslation } from "react-i18next";
 
-export const Types = ({ type, setType, text }) => {
+export const Types = ({ type, changeType, text }) => {
   return (
     <StyledTypes>
-      <Type type={type} text="all sports" handleClick={setType} />
-      <Type type={type} text="football" handleClick={setType} />
-      <Type type={type} text="tennis" handleClick={setType} />
-      <Type type={type} text="volleyball" handleClick={setType} />
-      <Type type={type} text="basketball" handleClick={setType} />
-      <Type type={type} text="ice hockey" handleClick={setType} />
+      <Type type={type} text="all sports" handleClick={changeType} />
+      <Type type={type} text="football" handleClick={changeType} />
+      <Type type={type} text="tennis" handleClick={changeType} />
+      <Type type={type} text="volleyball" handleClick={changeType} />
+      <Type type={type} text="basketball" handleClick={changeType} />
+      <Type type={type} text="ice hockey" handleClick={changeType} />
     </StyledTypes>
   );
 };

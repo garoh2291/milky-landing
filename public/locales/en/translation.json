@@ -6,7 +6,8 @@
   "main": {
     "prediction1": "65% Accurate Predictions",
     "prediction4": "We have already done it for you",
-    "button": "Explore"
+    "button": "Explore",
+    "more": "Load More"
   },
   "types": {
     "football": "football",
@@ -65,6 +66,7 @@
     "links": "Quick Links",
     "touch": "Get in touch",
     "privacy": "Privacy Policy",
-    "betset": "© 2022 BetSet LLC. All rights reserved."
+    "company": "©",
+    "milky": "MilkyScore LLC. All rights resertved"
   }
 }

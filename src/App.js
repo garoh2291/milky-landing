@@ -10,6 +10,7 @@ import { Main } from "./components/Main";
 import { Predictions } from "./components/Predictions";
 import { Promo } from "./components/demo";
 import { FAQ } from "./components/faq";
+import { Footer } from "./Layout/Footer";
 
 const theme = {
   colors: {
@@ -30,10 +31,11 @@ function App() {
           <GlobalStyles />
           <StyledApp>
             <Header />
-            {/*<Main />
-            <Predictions />*/}
-            {/*<Promo />*/}
+            <Main />
+            <Predictions />
+            <Promo />
             <FAQ />
+            <Footer />
           </StyledApp>
         </ThemeProvider>
       </LangContextProvivder>
