@@ -143,21 +143,36 @@ export const GameHead = styled.div`
 `;
 
 export const GameBody = styled.div`
-  height: calc(100% - 58px);
+  height: calc(100% - 138px);
+  padding: 20px 10px 20px;
 
-  & > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  & > div:not(:nth-child(2)) {
+    width: 40%;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-    & > div > div {
-      height: 30px;
-      width: 30px;
-
-      & > img {
-        width: 100%;
-        height: auto;
-      }
+    & > p {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 500;
+      font-size: ${({ letter }) => letter || "18px"};
+      line-height: 22px;
+      text-align: center;
     }
+  }
+
+  & > div:nth-child(2) {
+    margin-top: 15px;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 46px;
   }
 `;

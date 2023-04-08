@@ -10,6 +10,7 @@ import { renderIcon } from "./types";
 import calendar from "../../assets/calendar.png";
 import moment from "moment";
 import { LangContext } from "../../context";
+import { sportType } from "../../helpers";
 
 export const Game = ({ game, idx }) => {
   const { t } = useTranslation();
@@ -39,14 +40,15 @@ export const Game = ({ game, idx }) => {
           </div>
         </div>
       </GameHead>
-      <GameBody>
+      <GameBody letter={game.team1[lang].length > 15 && "16px"}>
         <div>
-          <div>
-            <div>
-              <img src={renderIcon(game.sport)} alt="type" />
-            </div>
-            <p>{game.team1[lang]}</p>
-          </div>
+          <div>{sportType(game.sport)}</div>
+          <p>{game.team1[lang]}</p>
+        </div>
+        <div>VS</div>
+        <div>
+          <div>{sportType(game.sport)}</div>
+          <p>{game.team2[lang]}</p>
         </div>
       </GameBody>
     </StandartWrap>
