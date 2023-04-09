@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { filteredGames } from "../../helpers";
-import { MoreBtnWrapper, StyledBoard } from "../styles/predictions.styles";
+import {
+  EmptyEvent,
+  MoreBtnWrapper,
+  StyledBoard,
+} from "../styles/predictions.styles";
 import { Game } from "./game";
 import { useTranslation } from "react-i18next";
 
@@ -17,7 +21,9 @@ export const Board = ({ games, type, clicked, setClicked }) => {
     setClicked(true);
   };
 
-  console.log(selected.length);
+  if (selected.length === 0) {
+    return <EmptyEvent>{t("promo.empty")}</EmptyEvent>;
+  }
   return (
     <>
       <StyledBoard>

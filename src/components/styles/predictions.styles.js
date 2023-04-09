@@ -12,7 +12,7 @@ export const StyledPredictions = styled.div`
 
 export const PredictWrapper = styled.div`
   width: 100%;
-  min-height: 300px;
+  min-height: 100px;
   padding-bottom: 60px;
 `;
 
@@ -88,7 +88,7 @@ export const MoreBtnWrapper = styled.div`
 
 export const StandartWrap = styled.div`
   width: 416px;
-  height: 261px;
+  min-height: 261px;
   background: rgba(255, 255, 255, 0.09);
   border-radius: 18px;
 `;
@@ -97,9 +97,45 @@ export const MatchWrap = styled.div`
   width: 416px;
   grid-row-end: span 2;
   height: 542px;
-
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(10, 10, 63, 0.9);
   border-radius: 18px;
+  padding: 20px 5px 20px 10px;
+
+  & > h6 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+  }
+`;
+
+export const MatchWrapGame = styled.div`
+  margin-top: 20px;
+  width: 100%;
+  min-height: 261px;
+  background: linear-gradient(
+    179.83deg,
+    #b88e1d 38.65%,
+    rgba(184, 142, 29, 0) 99.66%
+  );
+  border-radius: 18px;
+`;
+
+export const MatchDesc = styled.p`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
 
 export const GameHead = styled.div`
@@ -152,11 +188,11 @@ export const GameBody = styled.div`
 
   & > div:not(:nth-child(2)) {
     width: 40%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
     & > p {
       font-family: "Jost";
       font-style: normal;
@@ -175,4 +211,59 @@ export const GameBody = styled.div`
     font-size: 25px;
     line-height: 46px;
   }
+`;
+
+export const GameDetails = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 20px 10px 0px;
+`;
+
+export const Detail = styled.div`
+  text-align: center;
+  & > p:first-child {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  & > p:last-child {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+  }
+`;
+
+export const Event = styled.div`
+  flex: 1;
+  background: #32a516;
+  border: 1px solid #ffffff;
+  border-radius: 42px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-size: ${({ fs }) => fs || "16px"};
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+export const EmptyEvent = styled.div`
+  width: 100%;
+  height: 50px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
 `;

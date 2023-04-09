@@ -7,6 +7,7 @@ import {
 import { StyledContainer } from "../../components/styles/app.styles";
 import logo from "../../assets/logo.png";
 import { Menu } from "./menu";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -14,7 +15,9 @@ export const Header = () => {
       <StyledContainer>
         <StyledBar>
           <StyledLogo>
-            <img src={logo} alt="logo" />
+            <Link to={"/"}>
+              <img src={logo} alt="logo" />
+            </Link>
           </StyledLogo>
           <Menu />
         </StyledBar>

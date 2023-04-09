@@ -6,11 +6,9 @@ import { GlobalStyles } from "./components/styles/Global";
 import { StyledApp } from "./components/styles/app.styles";
 import { Header } from "./Layout/Header";
 import { LangContextProvivder } from "./context/provider";
-import { Main } from "./components/Main";
-import { Predictions } from "./components/Predictions";
-import { Promo } from "./components/demo";
-import { FAQ } from "./components/faq";
 import { Footer } from "./Layout/Footer";
+import { BrowserRouter } from "react-router-dom";
+import { RouteComponents } from "./routes";
 
 const theme = {
   colors: {
@@ -25,21 +23,20 @@ const theme = {
 
 function App() {
   return (
-    <Suspense fallback={<h1>Loading</h1>}>
-      <LangContextProvivder>
-        <ThemeProvider theme={theme}>
-          <GlobalStyles />
-          <StyledApp>
-            <Header />
-            <Main />
-            <Predictions />
-            <Promo />
-            <FAQ />
-            <Footer />
-          </StyledApp>
-        </ThemeProvider>
-      </LangContextProvivder>
-    </Suspense>
+    <BrowserRouter>
+      <Suspense fallback={<h1>Loading</h1>}>
+        <LangContextProvivder>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <StyledApp>
+              <Header />
+              <RouteComponents />
+              <Footer />
+            </StyledApp>
+          </ThemeProvider>
+        </LangContextProvivder>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

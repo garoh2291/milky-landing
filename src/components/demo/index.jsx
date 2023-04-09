@@ -21,7 +21,6 @@ export const Promo = () => {
   const { lang } = useContext(LangContext);
   const data = moment(new Date()).format("DD MMMM");
   const time = moment(new Date()).format("HH:mm");
-  console.log(lang);
   return (
     <PromoWrapper>
       <StyledContainer>

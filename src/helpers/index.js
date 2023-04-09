@@ -2,7 +2,7 @@ import hockey from "../assets/hockey1.png";
 import soccer from "../assets/soccer1.png";
 import tennis from "../assets/tennis1.png";
 import volleyball from "../assets/volleyball1.png";
-import basketball from "../assets/basketball1.jpeg";
+import basketball from "../assets/basketball1.png";
 
 export const getLang = () => {
   return localStorage.getItem("i18nextLng");
@@ -10,7 +10,9 @@ export const getLang = () => {
 
 export function filteredGames(games, filter) {
   const selected = games.find((g) => g.matchDay === "yes");
-  const final = [selected, ...games.filter((g) => g._id !== selected._id)];
+  const final = selected
+    ? [selected, ...games.filter((g) => g._id !== selected._id)]
+    : games;
 
   if (filter === "all sports") {
     return final;
@@ -36,13 +38,21 @@ export function sportType(sport) {
         <img
           src={basketball}
           alt="img"
-          width={"50px"}
-          height="50px"
-          style={{ marginRight: "7px" }}
+          width={"40px"}
+          height="40px"
+          style={{ marginBottom: "10px" }}
         />
       );
     case "ice hockey":
-      return <img src={hockey} alt="img" width={"40px"} height="40px" />;
+      return (
+        <img
+          src={hockey}
+          alt="img"
+          width={"40px"}
+          height="40px"
+          style={{ marginBottom: "10px" }}
+        />
+      );
     case "tennis":
       return (
         <img

@@ -16,7 +16,7 @@ export const Predictions = () => {
   const date = moment(new Date()).utc(8).toISOString();
 
   useEffect(() => {
-    fetch(`https://milky-admin.herokuapp.com/game?complete_gte=${date}&`)
+    fetch(`https://milky-admin.herokuapp.com/game?complete_gte=2023-04-08&`)
       .then((res) => res.json())
       .then((data) => setGames(data));
   }, []);

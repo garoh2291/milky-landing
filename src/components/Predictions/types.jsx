@@ -4,7 +4,7 @@ import football from "../../assets/football.png";
 import tennis from "../../assets/tennis.png";
 import hockey from "../../assets/hockey.png";
 import volleyball from "../../assets/volleyball.png";
-import basketball from "../../assets/basketball.png";
+import basketball from "../../assets/basketball2.png";
 import { useTranslation } from "react-i18next";
 
 export const Types = ({ type, changeType, text }) => {

@@ -18,5 +18,4 @@ export const StyledContainer = styled.div`
   padding: 0 64px;
   height: auto;
   margin: 0 auto;
-  /*border: 1px solid white;*/
 `;

@@ -10,7 +10,7 @@ export const FaqItem = ({ head, body }) => {
       sx={{
         backgroundColor: "#000",
         color: "#fff",
-        width: "49%",
+        width: "100%",
         borderBottom: "1px solid  rgba(255, 255, 255, 0.3)",
       }}
     >

@@ -20,7 +20,11 @@ export const StyledLogo = styled.div`
   height: 50px;
   cursor: pointer;
 
-  & > img {
+  & > a {
+    text-decoration: none;
+  }
+
+  & > a > img {
     width: 100%;
     height: auto;
   }
