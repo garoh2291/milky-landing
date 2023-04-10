@@ -87,6 +87,11 @@ export const PrivacyLink = styled.div`
     font-size: 8px;
     line-height: 10px;
     color: #ffffff;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      width: 50%;
+      text-align: right;
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile2}) {
