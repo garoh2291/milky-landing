@@ -9,6 +9,10 @@ export const MainWrapper = styled.div`
   width: 100%;
   min-height: 320px;
   display: flex;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const StyledExplore = styled.div`
@@ -48,6 +52,26 @@ export const StyledExplore = styled.div`
     line-height: 22px;
     padding: 15px 45px;
     margin-top: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
+    & > h2 {
+      font-size: ${({ fs }) => (fs === "am" ? "25px" : "30px;")};
+      line-height: 40px;
+    }
+    & > p {
+      font-size: 22px;
+      line-height: 25px;
+    }
+    & > button {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 `;
 

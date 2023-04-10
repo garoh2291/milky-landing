@@ -19,6 +19,7 @@ const theme = {
   },
   mobile: "800px",
   mobile2: "600px",
+  mobile3: "500px",
 };
 
 function App() {

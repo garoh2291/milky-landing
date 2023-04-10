@@ -18,4 +18,8 @@ export const StyledContainer = styled.div`
   padding: 0 64px;
   height: auto;
   margin: 0 auto;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    padding: 0 10px;
+  }
 `;

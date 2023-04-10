@@ -22,4 +22,16 @@ export const StyledFaq = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    padding-bottom: 30px;
+  }
+`;
+
+export const StyledSideFaq = styled.div`
+  width: 49%;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+  }
 `;

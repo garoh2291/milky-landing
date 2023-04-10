@@ -1,8 +1,7 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export const PromoWrapper = styled.div`
   width: 100%;
-  /* min-height: 474px; */
   color: #fff;
   background: rgba(255, 255, 255, 0.07);
 `;
@@ -11,8 +10,12 @@ export const StyledPromo = styled.div`
   width: 100%;
   min-height: 474px;
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
 `;
 
 export const PromoText = styled.div`
@@ -28,12 +31,19 @@ export const PromoText = styled.div`
     & > span {
       color: #c09216;
     }
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+    }
   }
   & > button {
     background: linear-gradient(180deg, #ffd200 0%, #f7971e 100%);
     border-radius: 42px;
     border: none;
     color: #fff;
+    text-transform: capitalize;
     padding: 8px 24px;
     font-family: "Montserrat";
     font-style: normal;
@@ -41,6 +51,19 @@ export const PromoText = styled.div`
     font-size: 18px;
     line-height: 22px;
     margin-top: 60px;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
   }
 `;
 
@@ -57,6 +80,10 @@ export const PromoBanner = styled.div`
     font-size: 46px;
     line-height: 56px;
     color: #ffffff;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      display: none;
+    }
   }
   & > div {
     width: 608px;
@@ -81,6 +108,11 @@ export const PromoBanner = styled.div`
         font-weight: 600;
         font-size: 22px;
         line-height: 32px;
+
+        @media (max-width: ${({ theme }) => theme.mobile2}) {
+          font-size: 18px;
+          line-height: 20px;
+        }
       }
 
       & > div {
@@ -94,9 +126,24 @@ export const PromoBanner = styled.div`
           font-weight: 600;
           font-size: 16px;
           line-height: 19px;
+
+          @media (max-width: ${({ theme }) => theme.mobile2}) {
+            font-size: 15px;
+            line-height: 18px;
+          }
         }
       }
     }
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      width: 100%;
+      min-height: 364px;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+    padding-left: 0px;
   }
 `;
 
@@ -159,4 +206,9 @@ export const EventDetail = styled.div`
   font-weight: ${({ cl }) => (cl ? "600" : "500")};
   font-size: ${({ cl }) => (cl ? "16px" : "14px")};
   line-height: ${({ cl }) => (cl ? "20px" : "17px")};
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 `;

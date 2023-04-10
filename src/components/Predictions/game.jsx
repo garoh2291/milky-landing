@@ -40,7 +40,12 @@ export const Game = ({ game, idx }) => {
               </div>
             </div>
           </GameHead>
-          <GameBody letter={game.team1[lang].length > 15 && "16px"}>
+          <GameBody
+            letter={
+              (game.team1[lang].length > 10 || game.team2[lang].length > 10) &&
+              "16px"
+            }
+          >
             <div>
               <div>{sportType(game.sport)}</div>
               <p>{game.team1[lang]}</p>
@@ -84,7 +89,12 @@ export const Game = ({ game, idx }) => {
           </div>
         </div>
       </GameHead>
-      <GameBody letter={game.team1[lang].length > 15 && "16px"}>
+      <GameBody
+        letter={
+          (game.team1[lang].length > 12 || game.team2[lang].length > 12) &&
+          "16px"
+        }
+      >
         <div>
           <div>{sportType(game.sport)}</div>
           <p>{game.team1[lang]}</p>
@@ -100,7 +110,7 @@ export const Game = ({ game, idx }) => {
           <p>{game.coeff.toFixed(2)}</p>
           <p>{t("promo.cf")}</p>
         </Detail>
-        <Event fs={game.position[lang].length > 15 && "12px"}>
+        <Event fs={game.position[lang].length > 15 && "11px"}>
           {game.position[lang]}
         </Event>
         <Detail>

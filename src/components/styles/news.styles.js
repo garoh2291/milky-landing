@@ -7,11 +7,21 @@ export const NewsWrapper = styled.div`
   display: flex;
   align-items: center;
   color: #fff;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const PromoWrapper = styled.div`
   width: 50%;
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const PromoPhoto = styled.div`
@@ -106,6 +116,11 @@ export const OtherArticles = styled.div`
     margin-block-start: 0 !important;
     margin-bottom: 15px;
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const ArticleWrap = styled.div`
@@ -153,6 +168,10 @@ export const ArticleImg = styled.div`
       font-weight: 400;
       font-size: 16px;
       line-height: 20px;
+
+      @media (max-width: ${({ theme }) => theme.mobile2}) {
+        font-size: 18px;
+      }
     }
   }
 `;
@@ -173,6 +192,10 @@ export const ArticleContent = styled.div`
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      font-size: 20px;
+    }
   }
 
   & > p {
@@ -187,6 +210,11 @@ export const ArticleContent = styled.div`
     text-overflow: ellipsis;
     overflow: hidden;
     margin-bottom: 15px;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   & > a {
@@ -197,5 +225,15 @@ export const ArticleContent = styled.div`
     font-size: 14px;
     line-height: 17px;
     color: #ffffff;
+  }
+
+  & > span {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    cursor: pointer;
   }
 `;

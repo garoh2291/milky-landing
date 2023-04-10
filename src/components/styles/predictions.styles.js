@@ -14,14 +14,25 @@ export const PredictWrapper = styled.div`
   width: 100%;
   min-height: 100px;
   padding-bottom: 60px;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    padding-bottom: 20px;
+  }
 `;
 
 export const StyledTypes = styled.div`
   width: 100%;
   height: 84px;
+  overflow-x: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-overflow-scrolling: touch;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    gap: 25px;
+    padding-bottom: 10px;
+  }
 `;
 
 export const StyledSport = styled.div`
@@ -41,6 +52,10 @@ export const StyledSport = styled.div`
     z-index: 5;
   }
 
+  & > img {
+    z-index: 5;
+  }
+
   &::after {
     content: "";
     width: ${({ active }) => active || "0%"};
@@ -52,6 +67,12 @@ export const StyledSport = styled.div`
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     box-shadow: 15px -30px 25px 5px #c89d1c;
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    & > p {
+      white-space: nowrap;
+    }
+  }
 `;
 
 export const StyledBoard = styled.div`
@@ -61,6 +82,12 @@ export const StyledBoard = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 410px);
   grid-gap: 20px;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const MoreBtnWrapper = styled.div`
@@ -83,6 +110,10 @@ export const MoreBtnWrapper = styled.div`
     margin-top: 30px;
     text-align: center;
     cursor: pointer;
+
+    & > img {
+      margin-left: 10px;
+    }
   }
 `;
 
@@ -91,6 +122,10 @@ export const StandartWrap = styled.div`
   min-height: 261px;
   background: rgba(255, 255, 255, 0.09);
   border-radius: 18px;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+  }
 `;
 
 export const MatchWrap = styled.div`
@@ -109,6 +144,11 @@ export const MatchWrap = styled.div`
     font-size: 22px;
     line-height: 27px;
     text-align: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -136,6 +176,10 @@ export const MatchDesc = styled.p`
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    -webkit-line-clamp: unset;
+  }
 `;
 
 export const GameHead = styled.div`
@@ -180,7 +224,7 @@ export const GameHead = styled.div`
 
 export const GameBody = styled.div`
   height: calc(100% - 138px);
-  padding: 20px 10px 20px;
+  padding: ${({ letter }) => (letter ? "20px 10px 0px" : "20px 10px 20px")};
 
   display: flex;
   align-items: flex-start;
@@ -261,6 +305,7 @@ export const EmptyEvent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: "Jost";
   font-style: normal;
   font-weight: 600;

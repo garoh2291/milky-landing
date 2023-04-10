@@ -26,10 +26,25 @@ export const LogoWrap = styled.div`
 
   & > div:first-child {
     gap: 20px;
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      flex-direction: column;
+    }
   }
 
   & > div:nth-child(2) {
     gap: 30px;
+  }
+
+  & > :last-child {
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 20px;
   }
 `;
 
@@ -45,6 +60,10 @@ export const TextWrapper = styled.div`
     font-size: 12px;
     line-height: 15px;
     text-transform: capitalize;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      text-align: center;
+    }
   }
 `;
 
@@ -68,5 +87,9 @@ export const PrivacyLink = styled.div`
     font-size: 8px;
     line-height: 10px;
     color: #ffffff;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    padding-bottom: 20px;
   }
 `;

@@ -13,6 +13,7 @@ export const StyledBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 `;
 
 export const StyledLogo = styled.div`
@@ -30,12 +31,42 @@ export const StyledLogo = styled.div`
   }
 `;
 
+export const StyledMobileWrap = styled.div`
+  height: 100%;
+  display: none;
+
+  & > button {
+    background-color: transparent;
+    border: none;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 export const StyledMenu = styled.div`
   min-width: 360px;
   height: 100%;
   display: flex;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    width: 100vw;
+    display: ${({ opened }) => opened || "none"};
+    height: 100vh;
+    z-index: 999;
+    position: fixed;
+    top: 84px;
+    left: 0;
+    background-color: #000;
+    flex-direction: column;
+    padding: 30px 10px;
+    gap: 20px;
+  }
 `;
 
 export const StyledLog = styled.a`
@@ -61,4 +92,25 @@ export const StyledJoin = styled.button`
   font-size: 18px;
   border: none;
   color: #ffffff;
+  cursor: pointer;
+`;
+
+export const MobileNav = styled.div`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    & > span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      cursor: pointer;
+    }
+  }
 `;

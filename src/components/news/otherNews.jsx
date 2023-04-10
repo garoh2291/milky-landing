@@ -26,7 +26,7 @@ export const OtherNews = ({ articles }) => {
   );
 };
 
-const Article = ({ article }) => {
+export const Article = ({ article }) => {
   const { lang } = useContext(LangContext);
 
   return (
