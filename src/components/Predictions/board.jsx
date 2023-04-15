@@ -9,6 +9,7 @@ import { Game } from "./game";
 import { useTranslation } from "react-i18next";
 import arrow from "../../assets/button.png";
 import { LangContext } from "../../context";
+import { StyledContainer } from "../styles/app.styles";
 
 export const Board = ({ games, type, clicked, setClicked }) => {
   const [selected, setSelected] = useState(games);
@@ -28,7 +29,7 @@ export const Board = ({ games, type, clicked, setClicked }) => {
     return <EmptyEvent>{t("promo.empty")}</EmptyEvent>;
   }
   return (
-    <>
+    <StyledContainer>
       <StyledBoard ref={predict}>
         {selected.map((game, idx) => (
           <Game key={game._id} game={game} idx={idx} />
@@ -41,6 +42,6 @@ export const Board = ({ games, type, clicked, setClicked }) => {
           </button>
         )}
       </MoreBtnWrapper>
-    </>
+    </StyledContainer>
   );
 };

@@ -32,17 +32,15 @@ export const Predictions = () => {
 
   return (
     <StyledPredictions>
-      <StyledContainer>
-        <PredictWrapper>
-          <Types type={type} changeType={changeType} />
-          <Board
-            games={games}
-            type={type}
-            clicked={clicked}
-            setClicked={setClicked}
-          />
-        </PredictWrapper>
-      </StyledContainer>
+      <PredictWrapper>
+        <Types type={type} changeType={changeType} />
+        <Board
+          games={games}
+          type={type}
+          clicked={clicked}
+          setClicked={setClicked}
+        />
+      </PredictWrapper>
     </StyledPredictions>
   );
 };

@@ -1,22 +1,31 @@
 import React from "react";
-import { StyledSport, StyledTypes } from "../styles/predictions.styles";
+import {
+  StyledSport,
+  StyledTypeWrap,
+  StyledTypes,
+} from "../styles/predictions.styles";
 import football from "../../assets/football.png";
 import tennis from "../../assets/tennis.png";
 import hockey from "../../assets/hockey.png";
 import volleyball from "../../assets/volleyball.png";
 import basketball from "../../assets/basketball2.png";
 import { useTranslation } from "react-i18next";
+import { StyledContainer } from "../styles/app.styles";
 
 export const Types = ({ type, changeType, text }) => {
   return (
-    <StyledTypes>
-      <Type type={type} text="all sports" handleClick={changeType} />
-      <Type type={type} text="football" handleClick={changeType} />
-      <Type type={type} text="tennis" handleClick={changeType} />
-      <Type type={type} text="volleyball" handleClick={changeType} />
-      <Type type={type} text="basketball" handleClick={changeType} />
-      <Type type={type} text="ice hockey" handleClick={changeType} />
-    </StyledTypes>
+    <StyledTypeWrap>
+      <StyledContainer>
+        <StyledTypes>
+          <Type type={type} text="all sports" handleClick={changeType} />
+          <Type type={type} text="football" handleClick={changeType} />
+          <Type type={type} text="tennis" handleClick={changeType} />
+          <Type type={type} text="volleyball" handleClick={changeType} />
+          <Type type={type} text="basketball" handleClick={changeType} />
+          <Type type={type} text="ice hockey" handleClick={changeType} />
+        </StyledTypes>
+      </StyledContainer>
+    </StyledTypeWrap>
   );
 };
 

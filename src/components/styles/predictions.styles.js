@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 export const StyledPredictions = styled.div`
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.0558) 0%,
-    rgba(255, 255, 255, 0.009) 100%
-  );
   width: 100%;
   color: #fff;
 `;
@@ -18,6 +13,14 @@ export const PredictWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.mobile2}) {
     padding-bottom: 20px;
   }
+`;
+
+export const StyledTypeWrap = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.0558) 0%,
+    rgba(255, 255, 255, 0.009) 100%
+  );
 `;
 
 export const StyledTypes = styled.div`
