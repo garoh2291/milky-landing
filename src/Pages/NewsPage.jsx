@@ -10,8 +10,14 @@ export const NewsPage = () => {
   const idx = pathname.split("/")[2];
 
   useEffect(() => {
-    const data = NEWS.find((article) => article.id === idx);
-    setArticle(data);
+    fetch(`https://milkyscore.herokuapp.com/api/v1/news/${idx}`)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        throw new Error("Network response was not ok.");
+      })
+      .then((data) => setArticle(data));
   }, [idx]);
 
   if (!article) {

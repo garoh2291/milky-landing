@@ -7,6 +7,7 @@ export const NewsWrapper = styled.div`
   display: flex;
   align-items: center;
   color: #fff;
+  justify-content: ${({ loading }) => loading || "flex-start"};
 
   @media (max-width: ${({ theme }) => theme.mobile2}) {
     flex-direction: column;

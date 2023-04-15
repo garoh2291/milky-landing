@@ -4,9 +4,26 @@ import { LangContext } from "../../context";
 import { useContext } from "react";
 import { ArticleContent, ArticleImg } from "../styles/news.styles";
 import moment from "moment";
+import CircularProgress from "@mui/material/CircularProgress";
+import { Link } from "react-router-dom";
 
 export const OtherNews = ({ news, handleClick }) => {
   const { t } = useTranslation();
+
+  if (!news) {
+    return (
+      <OtherArticleWrap
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "300px",
+        }}
+      >
+        <CircularProgress />
+      </OtherArticleWrap>
+    );
+  }
 
   return (
     <OtherArticleWrap>
@@ -26,7 +43,7 @@ export const OtherSingle = ({ article, handleClick }) => {
 
   return (
     <div>
-      <ArticleImg bg={article.url}>
+      <ArticleImg bg={article.image}>
         <div>
           <p>{moment(article.date).format("DD MMMM YYYY")}</p>
         </div>
@@ -34,7 +51,9 @@ export const OtherSingle = ({ article, handleClick }) => {
       <ArticleContent>
         <h6>{article.title[lang]}</h6>
         <p>{article.description[lang]}</p>
-        <span onClick={() => handleClick(article)}>{t("promo.more")}</span>
+        <Link to={`/news/${article._id}`} onClick={handleClick}>
+          {t("promo.more")}
+        </Link>
       </ArticleContent>
     </div>
   );

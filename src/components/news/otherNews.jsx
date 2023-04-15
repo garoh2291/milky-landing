@@ -31,7 +31,7 @@ export const Article = ({ article }) => {
 
   return (
     <div>
-      <ArticleImg bg={article.url}>
+      <ArticleImg bg={article.image}>
         <div>
           <p>{moment(article.date).format("DD MMMM YYYY")}</p>
         </div>
@@ -39,7 +39,7 @@ export const Article = ({ article }) => {
       <ArticleContent>
         <h6>{article.title[lang]}</h6>
         <p>{article.description[lang]}</p>
-        <Link to={`/news/${article.id}`}>{t("promo.more")}</Link>
+        <Link to={`/news/${article._id}`}>{t("promo.more")}</Link>
       </ArticleContent>
     </div>
   );

@@ -15,7 +15,7 @@ export const PromoNews = ({ article }) => {
   const { lang } = useContext(LangContext);
   return (
     <PromoWrapper>
-      <PromoPhoto photo={article.url}>
+      <PromoPhoto photo={article.image}>
         <div>
           <p>{moment(article.date).format("DD MMMM YYYY")}</p>
         </div>
@@ -25,7 +25,7 @@ export const PromoNews = ({ article }) => {
         <p>{article.description[lang]}</p>
       </PromoNewsDesc>
       <ReadMore>
-        <Link to={`/news/${article.id}`}>{t("promo.more")}</Link>
+        <Link to={`/news/${article._id}`}>{t("promo.more")}</Link>
       </ReadMore>
     </PromoWrapper>
   );

@@ -7,7 +7,7 @@ export const MainNews = ({ article, mainNews }) => {
   const { lang } = useContext(LangContext);
   return (
     <MainArticle ref={mainNews}>
-      <MainPhoto photo={article.url}>
+      <MainPhoto photo={article.image}>
         <div>
           <p>{moment(article.date).format("DD MMMM YYYY")}</p>
         </div>
