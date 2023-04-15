@@ -208,7 +208,7 @@ export const EventDetail = styled.div`
   line-height: ${({ cl }) => (cl ? "20px" : "17px")};
 
   @media (max-width: ${({ theme }) => theme.mobile2}) {
-    font-size: 14px;
+    font-size: 11px;
     line-height: 16px;
   }
 `;
