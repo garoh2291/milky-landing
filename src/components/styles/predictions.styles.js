@@ -271,13 +271,11 @@ export const GameDetails = styled.div`
 
 export const Detail = styled.div`
   text-align: center;
-  width: 10%;
   & > p:first-child {
     font-family: "Jost";
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    margin-block-start: -0.3em;
   }
   & > p:last-child {
     font-family: "Jost";
