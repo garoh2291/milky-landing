@@ -45,7 +45,7 @@ export const OtherSingle = ({ article, handleClick }) => {
     <div>
       <ArticleImg bg={article.image}>
         <div>
-          <p>{moment(article.date).format("DD MMMM YYYY")}</p>
+          <p>{moment(article.createdAt).format("DD MMMM YYYY")}</p>
         </div>
       </ArticleImg>
       <ArticleContent>

@@ -17,7 +17,7 @@ export const PromoNews = ({ article }) => {
     <PromoWrapper>
       <PromoPhoto photo={article.image}>
         <div>
-          <p>{moment(article.date).format("DD MMMM YYYY")}</p>
+          <p>{moment(article.createdAt).format("DD MMMM YYYY")}</p>
         </div>
       </PromoPhoto>
       <PromoNewsDesc>

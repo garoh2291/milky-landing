@@ -91,7 +91,7 @@ export const Game = ({ game, idx }) => {
       </GameHead>
       <GameBody
         letter={
-          (game.team1[lang].length > 12 || game.team2[lang].length > 12) &&
+          (game.team1[lang].length > 13 || game.team2[lang].length > 15) &&
           "16px"
         }
       >

@@ -22,8 +22,6 @@ export const News = () => {
       .then((data) => setNews(data));
   }, []);
 
-  console.log(news);
-
   if (!news)
     return (
       <StyledContainer>

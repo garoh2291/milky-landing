@@ -9,7 +9,7 @@ export const MainNews = ({ article, mainNews }) => {
     <MainArticle ref={mainNews}>
       <MainPhoto photo={article.image}>
         <div>
-          <p>{moment(article.date).format("DD MMMM YYYY")}</p>
+          <p>{moment(article.createdAt).format("DD MMMM YYYY")}</p>
         </div>
       </MainPhoto>
       <MainArtDesc>

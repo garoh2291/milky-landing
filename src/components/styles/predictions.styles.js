@@ -122,12 +122,14 @@ export const MoreBtnWrapper = styled.div`
 
 export const StandartWrap = styled.div`
   width: 416px;
-  min-height: 261px;
+  height: 261px;
   background: rgba(255, 255, 255, 0.09);
   border-radius: 18px;
 
   @media (max-width: ${({ theme }) => theme.mobile2}) {
     width: 100%;
+    height: unset;
+    min-height: 261px;
   }
 `;
 
@@ -269,12 +271,13 @@ export const GameDetails = styled.div`
 
 export const Detail = styled.div`
   text-align: center;
+  width: 10%;
   & > p:first-child {
     font-family: "Jost";
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
-    line-height: 26px;
+    margin-block-start: -0.3em;
   }
   & > p:last-child {
     font-family: "Jost";

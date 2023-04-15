@@ -1,0 +1,64 @@
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
+  background-color: #0a192f;
+}
+#splash h1 {
+  color: #ccd6f6;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+#splash svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  background: transparent;
+}
+#splash svg path {
+  animation-duration: 1s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  color: #64d1ff; /*40c456*/
+}
+#splash svg path.path-7 {
+  animation-delay: -1s;
+}
+#splash svg path.path-6 {
+  animation-delay: -0.875s;
+}
+#splash svg path.path-5 {
+  animation-delay: -0.75s;
+}
+#splash svg path.path-4 {
+  animation-delay: -0.625s;
+}
+#splash svg path.path-3 {
+  animation-delay: -0.5s;
+}
+#splash svg path.path-2 {
+  animation-delay: -0.375s;
+}
+#splash svg path.path-1 {
+  animation-delay: -0.25s;
+}
+#splash svg path.path-0 {
+  animation-delay: -0.125s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}

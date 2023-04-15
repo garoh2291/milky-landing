@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { StyledSingleNews } from "../styles/single.styles";
 import { MainNews } from "./MainNews";
 import { OtherNews } from "./OtherNews";
-import { NEWS } from "../../data";
 
 export const NewsPageWrap = ({ article }) => {
   const [articles, setArticles] = useState(null);

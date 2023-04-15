@@ -9,6 +9,7 @@ import { LangContextProvivder } from "./context/provider";
 import { Footer } from "./Layout/Footer";
 import { BrowserRouter } from "react-router-dom";
 import { RouteComponents } from "./routes";
+import { Loader } from "./components/loader/Loader";
 
 const theme = {
   colors: {
@@ -25,7 +26,7 @@ const theme = {
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<h1>Loading</h1>}>
+      <Suspense fallback={<Loader />}>
         <LangContextProvivder>
           <ThemeProvider theme={theme}>
             <GlobalStyles />
