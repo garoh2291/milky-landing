@@ -75,3 +75,18 @@ export function sportType(sport) {
       );
   }
 }
+
+export function getSport(sport) {
+  switch (sport) {
+    case "volleyball":
+      return volleyball;
+    case "basketball":
+      return basketball;
+    case "ice hockey":
+      return hockey;
+    case "tennis":
+      return tennis;
+    default:
+      return soccer;
+  }
+}

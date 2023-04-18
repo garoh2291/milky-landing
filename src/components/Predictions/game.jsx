@@ -15,7 +15,7 @@ import { renderIcon } from "./types";
 import calendar from "../../assets/calendar.png";
 import moment from "moment";
 import { LangContext } from "../../context";
-import { sportType } from "../../helpers";
+import { getSport, sportType } from "../../helpers";
 
 export const Game = ({ game, idx }) => {
   const { t } = useTranslation();
@@ -47,12 +47,42 @@ export const Game = ({ game, idx }) => {
             }
           >
             <div>
-              <div>{sportType(game.sport)}</div>
+              <div>
+                {" "}
+                {game.team2Logo ? (
+                  <img
+                    src={`https://cdn-sp.kertn.net/assets/team-logos/${game.team2Logo}.png`}
+                    alt="logo"
+                    onError={({ currentTarget }) => {
+                      currentTarget.onerror = null; // prevents looping
+                      currentTarget.src = getSport(game.sport);
+                    }}
+                    style={{ width: "auto", height: "50px" }}
+                  />
+                ) : (
+                  sportType(game.sport)
+                )}
+              </div>
               <p>{game.team1[lang]}</p>
             </div>
             <div>VS</div>
             <div>
-              <div>{sportType(game.sport)}</div>
+              <div>
+                {" "}
+                {game.team2Logo ? (
+                  <img
+                    src={`https://cdn-sp.kertn.net/assets/team-logos/${game.team2Logo}.png`}
+                    alt="logo"
+                    onError={({ currentTarget }) => {
+                      currentTarget.onerror = null; // prevents looping
+                      currentTarget.src = getSport(game.sport);
+                    }}
+                    style={{ width: "auto", height: "50px" }}
+                  />
+                ) : (
+                  sportType(game.sport)
+                )}
+              </div>
               <p>{game.team2[lang]}</p>
             </div>
           </GameBody>
@@ -65,7 +95,7 @@ export const Game = ({ game, idx }) => {
               {game.position[lang]}
             </Event>
             <Detail>
-              <p>80%</p>
+              <p>{game.probability ? `${game.probability}%` : "80%"}</p>
               <p>{t("promo.risk")}</p>
             </Detail>
           </GameDetails>
@@ -96,12 +126,42 @@ export const Game = ({ game, idx }) => {
         }
       >
         <div>
-          <div>{sportType(game.sport)}</div>
+          <div>
+            {" "}
+            {game.team1Logo ? (
+              <img
+                src={`https://cdn-sp.kertn.net/assets/team-logos/${game.team1Logo}.png`}
+                alt="logo"
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = getSport(game.sport);
+                }}
+                style={{ width: "auto", height: "50px" }}
+              />
+            ) : (
+              sportType(game.sport)
+            )}
+          </div>
           <p>{game.team1[lang]}</p>
         </div>
         <div>VS</div>
         <div>
-          <div>{sportType(game.sport)}</div>
+          <div>
+            {" "}
+            {game.team2Logo ? (
+              <img
+                src={`https://cdn-sp.kertn.net/assets/team-logos/${game.team2Logo}.png`}
+                alt="logo"
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = getSport(game.sport);
+                }}
+                style={{ width: "auto", height: "50px" }}
+              />
+            ) : (
+              sportType(game.sport)
+            )}
+          </div>
           <p>{game.team2[lang]}</p>
         </div>
       </GameBody>
@@ -114,7 +174,7 @@ export const Game = ({ game, idx }) => {
           {game.position[lang]}
         </Event>
         <Detail>
-          <p>80%</p>
+          <p>{game.probability ? `${game.probability}%` : "80%"}</p>
           <p>{t("promo.risk")}</p>
         </Detail>
       </GameDetails>
