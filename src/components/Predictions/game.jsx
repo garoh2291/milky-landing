@@ -51,7 +51,7 @@ export const Game = ({ game, idx }) => {
                 {" "}
                 {game.team2Logo ? (
                   <img
-                    src={`https://cdn-sp.kertn.net/assets/team-logos/${game.team2Logo}.png`}
+                    src={`https://cdn-sp.kertn.net/assets/team-logos/${game.team1Logo}.png`}
                     alt="logo"
                     onError={({ currentTarget }) => {
                       currentTarget.onerror = null; // prevents looping
