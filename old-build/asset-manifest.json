@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.58e28780.css",
+    "main.js": "/static/js/main.f19d46ad.js",
+    "static/media/news-5.jpeg": "/static/media/news-5.f1981c97e66bb93ee867.jpeg",
+    "static/media/news-4.jpeg": "/static/media/news-4.c6aeafdb60f27f518e92.jpeg",
+    "static/media/news-2.jpeg": "/static/media/news-2.b8a337d25d4df6557899.jpeg",
+    "static/media/news-3.jpeg": "/static/media/news-3.97ec2f8d7f529acb03f0.jpeg",
+    "static/media/sport.png": "/static/media/sport.36669db9502da9aeb869.png",
+    "static/media/news-1.jpeg": "/static/media/news-1.278cf496f7de38170c43.jpeg",
+    "static/media/basketball1.png": "/static/media/basketball1.5d95b2e36b2036a73f88.png",
+    "static/media/soccer1.png": "/static/media/soccer1.c96eb4aec6e8793cf7b4.png",
+    "static/media/tennis1.png": "/static/media/tennis1.407a4c2b72ab998c38c8.png",
+    "static/media/volleyball1.png": "/static/media/volleyball1.93c7fb658668b28c3c59.png",
+    "static/media/hockey1.png": "/static/media/hockey1.1f63ea22e18436beb021.png",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.58e28780.css.map": "/static/css/main.58e28780.css.map",
+    "main.f19d46ad.js.map": "/static/js/main.f19d46ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58e28780.css",
+    "static/js/main.f19d46ad.js"
+  ]
+}

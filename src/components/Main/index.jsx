@@ -9,12 +9,13 @@ import {
 } from "../styles/main.styles";
 import { useTranslation } from "react-i18next";
 import { LangContext } from "../../context";
+import basketballWall from "../../assets/basketballWall.png";
 
 export const Main = () => {
   const { lang, handlePredClick } = useContext(LangContext);
   const { t } = useTranslation();
   return (
-    <StyledMain>
+    <StyledMain bg={basketballWall}>
       <StyledContainer>
         <MainWrapper>
           <StyledExplore fs={lang === "am" && "42px"}>

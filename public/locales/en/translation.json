@@ -7,7 +7,9 @@
     "prediction1": "65% Accurate Predictions",
     "prediction4": "We have already done it for you",
     "button": "Explore",
-    "more": "Load More"
+    "more": "Load More",
+    "mainPage": "Go To Main Page",
+    "soon": "Comming Soon"
   },
   "types": {
     "football": "football",
@@ -74,5 +76,19 @@
     "privacy": "Privacy Policy",
     "company": "©",
     "milky": "MilkyScore LLC. All rights resertved"
+  },
+  "month": {
+    "01": "Jan",
+    "02": "Feb",
+    "03": "Mar",
+    "04": "Apr",
+    "05": "May",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Aug",
+    "09": "Sep",
+    "10": "Oct",
+    "11": "Nov",
+    "12": "Dec"
   }
 }

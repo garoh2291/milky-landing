@@ -18,6 +18,7 @@ import instagram from "../../assets/instagram.png";
 import fb from "../../assets/fb.png";
 import tiktok from "../../assets/tiktok.png";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -27,7 +28,9 @@ export const Footer = () => {
         <FooterWrapper>
           <LogoWrap>
             <div>
-              <img src={logo} alt="logo" />
+              <Link to={"/"}>
+                <img src={logo} alt="logo" />
+              </Link>
               <img src={google} alt="gplay" />
               <img src={apple} alt="apple" />
             </div>
@@ -63,7 +66,7 @@ export const Footer = () => {
               18+ {t("footer.company")} {`${new Date().getFullYear()} `}
               {t("footer.milky")}
             </p>
-            <a href="/">{t("footer.privacy")}</a>
+            <Link to={"/privacy-policy"}>{t("footer.privacy")}</Link>
           </PrivacyLink>
         </FooterWrapper>
       </StyledContainer>

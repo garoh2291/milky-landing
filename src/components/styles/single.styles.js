@@ -116,15 +116,17 @@ export const OtherWrap = styled.div`
   height: calc(100% - 46px);
   overflow-y: auto;
 
-  & > div {
+  & > a {
     width: 100%;
     height: 137px;
     margin-bottom: 15px;
     display: flex;
     gap: 10px;
+    color: #fff;
+    text-decoration: none;
   }
 
-  & > div:last-child {
+  & > a:last-child {
     margin-bottom: 0;
   }
 

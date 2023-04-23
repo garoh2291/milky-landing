@@ -33,6 +33,19 @@ export const LogoWrap = styled.div`
 
   & > div:nth-child(2) {
     gap: 30px;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      flex-direction: column;
+      gap: 20px;
+
+      & > img:first-child {
+        order: 1;
+      }
+
+      & > img:last-child {
+        order: 2;
+      }
+    }
   }
 
   & > :last-child {

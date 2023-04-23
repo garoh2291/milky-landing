@@ -15,11 +15,13 @@ import football from "../../assets/football.png";
 import volleyball from "../../assets/volleyball.png";
 import { useContext } from "react";
 import { LangContext } from "../../context";
+import { Link } from "react-router-dom";
 
 export const Promo = () => {
   const { t } = useTranslation();
   const { lang } = useContext(LangContext);
-  const data = moment(new Date()).format("DD MMMM");
+  const data = moment(new Date()).format("DD");
+  const month = moment(new Date()).format("MM");
   const time = moment(new Date()).format("HH:mm");
   return (
     <PromoWrapper>
@@ -31,7 +33,9 @@ export const Promo = () => {
               <span>{t("promo.special")} </span>
               {t("promo.text2")}
             </h3>
-            <button>{t("promo.join")}</button>
+            <button>
+              <Link to={"/auth"}>{t("promo.join")}</Link>
+            </button>
           </PromoText>
           <PromoBanner>
             <p>2x</p>
@@ -41,7 +45,10 @@ export const Promo = () => {
                 <div>
                   <img src={calendar} alt="calendar" />
                   <div>
-                    <p>{data}</p>
+                    <p>
+                      {" "}
+                      {data} {t(`month.${month}`)}
+                    </p>
                     <p>{time}</p>
                   </div>
                 </div>

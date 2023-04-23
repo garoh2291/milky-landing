@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const StyledMain = styled.div`
   width: 100%;
   color: #fff;
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    flex-direction: column-reverse;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(${({ bg }) => bg});
+  }
 `;
 
 export const MainWrapper = styled.div`
@@ -67,6 +75,8 @@ export const StyledExplore = styled.div`
     & > p {
       font-size: 22px;
       line-height: 25px;
+      font-weight: 500;
+      color: #fff;
     }
     & > button {
       font-size: 16px;
@@ -85,5 +95,9 @@ export const StyledImage = styled.div`
   & > img {
     width: 100%;
     height: auto;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile2}) {
+    display: none;
   }
 `;

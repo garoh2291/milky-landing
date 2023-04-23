@@ -52,6 +52,11 @@ export const PromoText = styled.div`
     line-height: 22px;
     margin-top: 60px;
 
+    & > a {
+      text-decoration: none;
+      color: #fff;
+    }
+
     @media (max-width: ${({ theme }) => theme.mobile2}) {
       margin-top: 20px;
     }

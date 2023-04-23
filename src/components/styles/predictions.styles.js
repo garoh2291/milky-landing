@@ -26,15 +26,29 @@ export const StyledTypeWrap = styled.div`
 export const StyledTypes = styled.div`
   width: 100%;
   height: 84px;
-  overflow-x: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   -webkit-overflow-scrolling: touch;
 
   @media (max-width: ${({ theme }) => theme.mobile2}) {
-    gap: 25px;
+    padding-top: 10px;
+    gap: 5px;
     padding-bottom: 10px;
+    overflow-x: auto;
+    height: unset;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* & > div:last-child {
+      margin-right: 10px;
+    } */
   }
 `;
 
@@ -72,8 +86,23 @@ export const StyledSport = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.mobile2}) {
+    background-color: ${({ active }) => (active ? "#c89d1c" : "")};
+    padding: 10px 5px;
+    border-radius: 8px;
+    width: 30%;
     & > p {
       white-space: nowrap;
+      font-size: ${({ sz }) => sz || "14px"};
+      line-height: 14px;
+    }
+
+    & > img {
+      width: 16px;
+      height: 16px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 `;
@@ -123,13 +152,42 @@ export const MoreBtnWrapper = styled.div`
 export const StandartWrap = styled.div`
   width: 416px;
   height: 261px;
-  background: rgba(255, 255, 255, 0.09);
   border-radius: 18px;
+  position: relative;
+  /* background: rgba(255, 255, 255, 0.09); */
+  background-image: url(${({ bg }) => bg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left 105px;
+
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left 105px;
+    border-radius: 18px;
+    background-image: url(${({ bg }) => bg});
+    position: absolute;
+    transform: rotateY(180deg);
+
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @media (max-width: ${({ theme }) => theme.mobile2}) {
+      background-position: center left -25%;
+    }
+  }
 
   @media (max-width: ${({ theme }) => theme.mobile2}) {
     width: 100%;
     height: unset;
     min-height: 261px;
+    background-position: center left -25%;
   }
 `;
 
@@ -140,7 +198,7 @@ export const MatchWrap = styled.div`
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(10, 10, 63, 0.9);
   border-radius: 18px;
-  padding: 20px 5px 20px 10px;
+  padding: 5px 5px 20px 5px;
 
   & > h6 {
     font-family: "Montserrat";
@@ -158,7 +216,7 @@ export const MatchWrap = styled.div`
 `;
 
 export const MatchWrapGame = styled.div`
-  margin-top: 20px;
+  /* margin-top: 20px; */
   width: 100%;
   min-height: 261px;
   background: linear-gradient(
@@ -167,6 +225,7 @@ export const MatchWrapGame = styled.div`
     rgba(184, 142, 29, 0) 99.66%
   );
   border-radius: 18px;
+  position: relative;
 `;
 
 export const MatchDesc = styled.p`
@@ -195,7 +254,7 @@ export const GameHead = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 20px;
+  padding: 0px 10px;
 
   & > div:first-child {
     display: flex;
@@ -224,16 +283,20 @@ export const GameHead = styled.div`
       font-size: 14px;
       line-height: 18px;
     }
+
+    & > div:last-child > p:first-child {
+      font-size: 10px;
+    }
   }
 `;
 
 export const GameBody = styled.div`
   height: calc(100% - 138px);
-  padding: ${({ letter }) => (letter ? "20px 10px 0px" : "20px 10px 20px")};
-
+  padding: ${({ letter }) => (letter ? "30px 10px 0px" : "30px 10px 20px")};
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
 
   & > div:not(:nth-child(2)) {
     width: 40%;
@@ -247,19 +310,41 @@ export const GameBody = styled.div`
       font-style: normal;
       font-weight: 500;
       font-size: ${({ letter }) => letter || "18px"};
-      line-height: 22px;
+      line-height: 20px;
       text-align: center;
+      width: 80%;
     }
   }
 
   & > div:nth-child(2) {
-    margin-top: 15px;
+    margin-top: 35px;
     font-family: "Jost";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 46px;
+
+    & > div {
+      width: 30px;
+      height: 3px;
+      background-color: #ffffff;
+    }
   }
+`;
+
+export const GameOfDay = styled.div`
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  color: #0a0a3f;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
 `;
 
 export const GameDetails = styled.div`
@@ -295,7 +380,8 @@ export const Event = styled.div`
   font-style: normal;
   font-weight: 600;
   font-size: ${({ fs }) => fs || "16px"};
-  line-height: 23px;
+  padding: ${({ fs }) => (fs ? "0px 10px" : "")};
+  line-height: ${({ fs }) => (fs ? "15px" : "23px")};
   display: flex;
   align-items: center;
   justify-content: center;

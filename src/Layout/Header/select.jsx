@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { LangContext } from "../../context";
 
-export const Lang = () => {
+export const Lang = ({ cb }) => {
   const { lang, setLang } = useContext(LangContext);
   const { i18n } = useTranslation();
 
@@ -12,6 +12,7 @@ export const Lang = () => {
     const val = e.target.value;
     i18n.changeLanguage(val);
     setLang(val);
+    cb();
   };
 
   return (

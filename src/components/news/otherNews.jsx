@@ -30,7 +30,7 @@ export const Article = ({ article }) => {
   const { lang } = useContext(LangContext);
 
   return (
-    <div>
+    <Link to={`/news/${article._id}`}>
       <ArticleImg bg={article.image}>
         <div>
           <p>{moment(article.createdAt).format("DD MMMM YYYY")}</p>
@@ -39,8 +39,8 @@ export const Article = ({ article }) => {
       <ArticleContent>
         <h6>{article.title[lang]}</h6>
         <p>{article.description[lang]}</p>
-        <Link to={`/news/${article._id}`}>{t("promo.more")}</Link>
+        <span>{t("promo.more")}</span>
       </ArticleContent>
-    </div>
+    </Link>
   );
 };

@@ -69,14 +69,16 @@ export const StyledMenu = styled.div`
   }
 `;
 
-export const StyledLog = styled.a`
-  text-decoration: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  color: #ffffff;
+export const StyledLog = styled.div`
+  & > a {
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+  }
 `;
 
 export const StyledJoin = styled.button`
@@ -93,6 +95,11 @@ export const StyledJoin = styled.button`
   border: none;
   color: #ffffff;
   cursor: pointer;
+
+  & > a {
+    color: #ffffff;
+    text-decoration: none;
+  }
 `;
 
 export const MobileNav = styled.div`
@@ -104,13 +111,14 @@ export const MobileNav = styled.div`
     flex-direction: column;
     gap: 20px;
 
-    & > span {
+    & > a {
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
       line-height: 22px;
-      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
     }
   }
 `;

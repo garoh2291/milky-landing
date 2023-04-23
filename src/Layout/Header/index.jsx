@@ -19,7 +19,7 @@ export const Header = () => {
       <StyledContainer>
         <StyledBar>
           <StyledLogo>
-            <Link to={"/"}>
+            <Link to={"/"} onClick={() => setIsOpened(false)}>
               <img src={logo} alt="logo" />
             </Link>
           </StyledLogo>

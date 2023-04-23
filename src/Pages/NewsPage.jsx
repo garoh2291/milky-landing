@@ -7,7 +7,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 export const NewsPage = () => {
   const [article, setArticle] = useState(null);
   const { pathname } = useLocation();
-  const idx = pathname.split("/")[2];
+  const idx = pathname.split("/")[2] || "";
 
   useEffect(() => {
     fetch(`https://milkyscore.herokuapp.com/api/v1/news/${idx}`)
@@ -17,7 +17,13 @@ export const NewsPage = () => {
         }
         throw new Error("Network response was not ok.");
       })
-      .then((data) => setArticle(data));
+      .then((data) => {
+        if (idx) {
+          setArticle(data);
+        } else {
+          setArticle(data[0]);
+        }
+      });
   }, [idx]);
 
   if (!article) {

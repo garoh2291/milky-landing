@@ -42,7 +42,7 @@ export const OtherSingle = ({ article, handleClick }) => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <Link to={`/news/${article._id}`} onClick={handleClick}>
       <ArticleImg bg={article.image}>
         <div>
           <p>{moment(article.createdAt).format("DD MMMM YYYY")}</p>
@@ -51,10 +51,8 @@ export const OtherSingle = ({ article, handleClick }) => {
       <ArticleContent>
         <h6>{article.title[lang]}</h6>
         <p>{article.description[lang]}</p>
-        <Link to={`/news/${article._id}`} onClick={handleClick}>
-          {t("promo.more")}
-        </Link>
+        <span>{t("promo.more")}</span>
       </ArticleContent>
-    </div>
+    </Link>
   );
 };

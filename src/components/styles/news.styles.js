@@ -19,6 +19,14 @@ export const PromoWrapper = styled.div`
   width: 50%;
   height: 100%;
 
+  & > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+  }
+
   @media (max-width: ${({ theme }) => theme.mobile2}) {
     width: 100%;
     height: auto;
@@ -92,7 +100,7 @@ export const PromoNewsDesc = styled.div`
 export const ReadMore = styled.div`
   height: 40px;
 
-  & > a {
+  & > span {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
@@ -129,15 +137,17 @@ export const ArticleWrap = styled.div`
   height: calc(100% - 46px);
   overflow-y: auto;
 
-  & > div {
+  & > a {
     width: 100%;
     height: 137px;
     margin-bottom: 15px;
     display: flex;
     gap: 10px;
+    text-decoration: none;
+    color: #fff;
   }
 
-  & > div:last-child {
+  & > a:last-child {
     margin-bottom: 0;
   }
 `;

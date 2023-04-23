@@ -3,6 +3,16 @@ import soccer from "../assets/soccer1.png";
 import tennis from "../assets/tennis1.png";
 import volleyball from "../assets/volleyball1.png";
 import basketball from "../assets/basketball1.png";
+import footballWall from "../assets/footballWall.png";
+import basketballWall from "../assets/basketballWall.png";
+import hockeyWall from "../assets/hockeyWall.png";
+import tennisWall from "../assets/tennisWall.png";
+import volleyballWall from "../assets/volleballWall.png";
+import footballNew from "../assets/footballNew.png";
+import basketballNew from "../assets/baskteballNew.png";
+import hockeyNew from "../assets/hockeyNew.png";
+import tennisNew from "../assets/tennisNew.png";
+import volleyballNew from "../assets/volleyballNew.png";
 
 export const getLang = () => {
   return localStorage.getItem("i18nextLng");
@@ -88,5 +98,35 @@ export function getSport(sport) {
       return tennis;
     default:
       return soccer;
+  }
+}
+
+export function getSportWall(sport) {
+  switch (sport) {
+    case "volleyball":
+      return volleyballWall;
+    case "basketball":
+      return basketballWall;
+    case "ice hockey":
+      return hockeyWall;
+    case "tennis":
+      return tennisWall;
+    default:
+      return footballWall;
+  }
+}
+
+export function getSportNew(sport) {
+  switch (sport) {
+    case "volleyball":
+      return volleyballNew;
+    case "basketball":
+      return basketballNew;
+    case "ice hockey":
+      return hockeyNew;
+    case "tennis":
+      return tennisNew;
+    default:
+      return footballNew;
   }
 }

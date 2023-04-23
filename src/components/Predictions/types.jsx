@@ -35,6 +35,7 @@ const Type = ({ type, text, handleClick }) => {
     <StyledSport
       active={text === type && "100%"}
       onClick={() => handleClick(text)}
+      sz={text === "basketball" && "12px"}
     >
       {text !== "all sports" ? <img src={renderIcon(text)} alt="type" /> : ""}
       <p>{t(`types.${text}`)}</p>
