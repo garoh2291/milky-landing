@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   PrivacyWrapper,
   StyledHeadtext,
@@ -7,6 +7,9 @@ import {
 import { StyledContainer } from "../components/styles/app.styles";
 
 export const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <StyledPrivacy>
       <StyledContainer>
