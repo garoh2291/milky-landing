@@ -118,7 +118,9 @@ export const Game = ({ game, idx }) => {
             </Detail>
           </GameDetails>
         </MatchWrapGame>
-        <MatchDesc>{game.description[lang]}</MatchDesc>
+        <MatchDesc title={game.description[lang]}>
+          {game.description[lang]}
+        </MatchDesc>
       </MatchWrap>
     );
   }

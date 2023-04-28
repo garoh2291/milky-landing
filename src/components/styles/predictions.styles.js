@@ -236,7 +236,7 @@ export const MatchDesc = styled.p`
   line-height: 20px;
   margin-top: 30px;
   display: -webkit-box;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 11;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
