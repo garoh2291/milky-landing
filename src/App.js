@@ -10,6 +10,7 @@ import { Footer } from "./Layout/Footer";
 import { BrowserRouter } from "react-router-dom";
 import { RouteComponents } from "./routes";
 import { Loader } from "./components/loader/Loader";
+import { ScrollToTop } from "./helpers/hoc";
 
 const theme = {
   colors: {
@@ -26,18 +27,20 @@ const theme = {
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loader />}>
-        <LangContextProvivder>
-          <ThemeProvider theme={theme}>
-            <GlobalStyles />
-            <StyledApp>
-              <Header />
-              <RouteComponents />
-              <Footer />
-            </StyledApp>
-          </ThemeProvider>
-        </LangContextProvivder>
-      </Suspense>
+      <ScrollToTop>
+        <Suspense fallback={<Loader />}>
+          <LangContextProvivder>
+            <ThemeProvider theme={theme}>
+              <GlobalStyles />
+              <StyledApp>
+                <Header />
+                <RouteComponents />
+                <Footer />
+              </StyledApp>
+            </ThemeProvider>
+          </LangContextProvivder>
+        </Suspense>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }
