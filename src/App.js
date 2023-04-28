@@ -11,6 +11,7 @@ import { BrowserRouter } from "react-router-dom";
 import { RouteComponents } from "./routes";
 import { Loader } from "./components/loader/Loader";
 import { ScrollToTop } from "./helpers/hoc";
+import { useRef } from "react";
 
 const theme = {
   colors: {
@@ -25,22 +26,23 @@ const theme = {
 };
 
 function App() {
+  const pageRef = useRef(null);
   return (
     <BrowserRouter>
-      <ScrollToTop>
-        <Suspense fallback={<Loader />}>
-          <LangContextProvivder>
-            <ThemeProvider theme={theme}>
-              <GlobalStyles />
-              <StyledApp>
+      <Suspense fallback={<Loader />}>
+        <LangContextProvivder>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <StyledApp ref={pageRef}>
+              <ScrollToTop scrollReff={pageRef}>
                 <Header />
                 <RouteComponents />
                 <Footer />
-              </StyledApp>
-            </ThemeProvider>
-          </LangContextProvivder>
-        </Suspense>
-      </ScrollToTop>
+              </ScrollToTop>
+            </StyledApp>
+          </ThemeProvider>
+        </LangContextProvivder>
+      </Suspense>
     </BrowserRouter>
   );
 }

@@ -7,7 +7,7 @@ import moment from "moment";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Link } from "react-router-dom";
 
-export const OtherNews = ({ news, handleClick }) => {
+export const OtherNews = ({ news }) => {
   const { t } = useTranslation();
 
   if (!news) {
@@ -30,19 +30,19 @@ export const OtherNews = ({ news, handleClick }) => {
       <h6>{t("promo.news")}</h6>
       <OtherWrap>
         {news.map((article, idx) => (
-          <OtherSingle key={idx} article={article} handleClick={handleClick} />
+          <OtherSingle key={idx} article={article} />
         ))}
       </OtherWrap>
     </OtherArticleWrap>
   );
 };
 
-export const OtherSingle = ({ article, handleClick }) => {
+export const OtherSingle = ({ article }) => {
   const { lang } = useContext(LangContext);
   const { t } = useTranslation();
 
   return (
-    <Link to={`/news/${article._id}`} onClick={handleClick}>
+    <Link to={`/news/${article._id}`}>
       <ArticleImg bg={article.image}>
         <div>
           <p>{moment(article.createdAt).format("DD MMMM YYYY")}</p>

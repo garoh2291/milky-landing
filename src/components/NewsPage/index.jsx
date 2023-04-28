@@ -6,8 +6,6 @@ import { OtherNews } from "./OtherNews";
 export const NewsPageWrap = ({ article }) => {
   const [articles, setArticles] = useState(null);
 
-  const mainNews = useRef();
-
   useEffect(() => {
     fetch(`https://milkyscore.herokuapp.com/api/v1/news`)
       .then((res) => {
@@ -23,16 +21,10 @@ export const NewsPageWrap = ({ article }) => {
       });
   }, [article]);
 
-  const changeArticle = () => {
-    if (mainNews.current) {
-      mainNews.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <StyledSingleNews>
-      <MainNews article={article} mainNews={mainNews} />
-      <OtherNews news={articles} handleClick={changeArticle} />
+      <MainNews article={article} />
+      <OtherNews news={articles} />
     </StyledSingleNews>
   );
 };

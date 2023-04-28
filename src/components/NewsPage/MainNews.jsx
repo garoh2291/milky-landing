@@ -3,10 +3,10 @@ import moment from "moment";
 import { useContext } from "react";
 import { LangContext } from "../../context";
 
-export const MainNews = ({ article, mainNews }) => {
+export const MainNews = ({ article }) => {
   const { lang } = useContext(LangContext);
   return (
-    <MainArticle ref={mainNews}>
+    <MainArticle>
       <MainPhoto photo={article.image}>
         <div>
           <p>{moment(article.createdAt).format("DD MMMM YYYY")}</p>
